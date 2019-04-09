@@ -45,6 +45,7 @@ public class UpperCaseCounterTest {
         new ArrayList<Object>().get(0);
     }
 
+    @Ignore
     @Test(timeout = 5000)
     public void testShouldRunInLimitedTime() throws InterruptedException {
         Thread.sleep(4000);
