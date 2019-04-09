@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
@@ -35,5 +37,10 @@ public class UpperCaseCounterTest {
         assertThat(numberOfUpperCaseCharactersInString , is(10));
         assertTrue(numberOfUpperCaseCharactersInString == 10);
         assertFalse(numberOfUpperCaseCharactersInString == 12);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void shouldThrowExceptionWhenGetZeroIndex() {
+        new ArrayList<Object>().get(0);
     }
 }
