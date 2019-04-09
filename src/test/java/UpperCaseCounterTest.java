@@ -1,3 +1,4 @@
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -42,5 +43,11 @@ public class UpperCaseCounterTest {
     @Test(expected = IndexOutOfBoundsException.class)
     public void shouldThrowExceptionWhenGetZeroIndex() {
         new ArrayList<Object>().get(0);
+    }
+
+    @Test(timeout = 5000)
+    public void testShouldRunInLimitedTime() throws InterruptedException {
+        Thread.sleep(4000);
+        System.out.println("제한된 시간 내에 수행되면 테스트 Passed!");
     }
 }
